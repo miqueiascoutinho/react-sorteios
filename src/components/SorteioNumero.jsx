@@ -55,34 +55,34 @@ export default function SorteiroNumero({
 
   return (
     <section>
-      <h1>via numero</h1>
-      <TextField
-        label="Valor inicial"
-        size="medium"
-        variant="outlined"
-        placeholder="Valor inicial"
-        value={valorInicial}
-        onChange={_handlerValorInicial}
-        onBlur={_handlerValidaDigitacao}
-        style={{ margin: "20px" }}
-        error={!erros.inicio.valido}
-        helperText={erros.inicio.mensagem}
-        name="inicio"
-      />
-      <TextField
-        label="Valor final"
-        size="medium"
-        variant="outlined"
-        placeholder="Valor final"
-        value={valorFinal}
-        onChange={_handlerValorFinal}
-        onBlur={_handlerValidaDigitacao}
-        style={{ margin: "20px" }}
-        error={!erros.final.valido}
-        helperText={erros.final.mensagem}
-        name="final"
-      />
-
+      <main>
+        <TextField
+          label="Valor inicial"
+          size="medium"
+          variant="outlined"
+          placeholder="Valor inicial"
+          value={valorInicial}
+          onChange={_handlerValorInicial}
+          onBlur={_handlerValidaDigitacao}
+          style={{ margin: "20px" }}
+          error={!erros.inicio.valido}
+          helperText={erros.inicio.mensagem}
+          name="inicio"
+        />
+        <TextField
+          label="Valor final"
+          size="medium"
+          variant="outlined"
+          placeholder="Valor final"
+          value={valorFinal}
+          onChange={_handlerValorFinal}
+          onBlur={_handlerValidaDigitacao}
+          style={{ margin: "20px" }}
+          error={!erros.final.valido}
+          helperText={erros.final.mensagem}
+          name="final"
+        />
+      </main>
       <Button
         disabled={
           !(
@@ -90,10 +90,11 @@ export default function SorteiroNumero({
             parseInt(valorInicial) < parseInt(valorFinal)
           )
         }
-        fullWidth={true}
+        fullWidth={false}
         color="primary"
         variant="contained"
         onClick={_sorteio}
+        style={{ margin: "15px 0 0 0"}}
       >
         Sorteio
       </Button>

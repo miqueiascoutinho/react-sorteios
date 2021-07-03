@@ -20,6 +20,7 @@ export default function FormularioPrincipal() {
   function _handlerSelecioneModoSorteiro(e) {
     setByNumero(!byNumuro);
     setByNome(!byNome);
+    setSorteioRealizado(false);
   }
 
   return (
@@ -34,7 +35,7 @@ export default function FormularioPrincipal() {
           component="h1"
           variant="h6"
           align="center"
-          style={{ margin: "40px" }}
+          style={{ margin: "20px" }}
         >
           Bem-vindo ao site "Meus sorteios"
         </Typography>
@@ -44,7 +45,7 @@ export default function FormularioPrincipal() {
             component="h1"
             variant="h6"
             align="center"
-            style={{ margin: "60px" }}
+            style={{ margin: "30px" }}
           >
             O valor sorteado foi: {valorSorteado}
           </Typography>
@@ -83,7 +84,10 @@ export default function FormularioPrincipal() {
             setSorteioRealizado={setSorteioRealizado}
           />
         ) : (
-          <SorteioNome />
+          <SorteioNome
+            setValorSorteado={setValorSorteado}
+            setSorteioRealizado={setSorteioRealizado}
+          />
         )}
       </main>
     </Container>

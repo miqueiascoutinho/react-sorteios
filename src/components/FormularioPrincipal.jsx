@@ -47,7 +47,7 @@ export default function FormularioPrincipal() {
             align="center"
             style={{ margin: "30px" }}
           >
-            O valor sorteado foi: {valorSorteado}
+            O valor sorteado foi: {byNumuro ? valorSorteado : valorSorteado.toUpperCase()}
           </Typography>
         ) : null}
 

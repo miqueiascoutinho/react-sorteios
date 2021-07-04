@@ -9,7 +9,7 @@ export default function SorteioNome(props) {
   function _handlerNomesDigitados(e) {
     let values = e.target.value;
     setNomes(values);
-    setOpcoes(values.split(",").filter((nome) => nome.length > 0));
+    setOpcoes(values.split(",").filter((nome) => nome.trim().length > 0));
   }
 
   function _sorteio() { 
